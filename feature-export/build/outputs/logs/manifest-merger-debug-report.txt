@@ -1,0 +1,31 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:2:1-13:12
+INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:2:1-13:12
+	package
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:3:5-50
+		INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:5:22-74
+application
+ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:7:5-12:19
+service#com.jofin.multivideo.feature.export.ExportForegroundService
+ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:8:9-11:56
+	android:exported
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:10:13-37
+	android:foregroundServiceType
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:11:13-53
+	android:name
+		ADDED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:9:13-52
+uses-sdk
+INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml
+INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml

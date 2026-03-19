@@ -1,0 +1,15 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml:2:1-55
+INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml:2:1-55
+	package
+		ADDED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml:2:11-52
+		INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml
+INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/jofin/multilayout-video/core-media/src/main/AndroidManifest.xml

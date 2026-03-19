@@ -1,0 +1,12 @@
+interface:
+  display_name: Multi Video Editor Compose UI
+  short_description: Generate Compose UI for a multi-video editor app.
+  icon: sparkles
+  color: black
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,23 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.jofin.multivideo.feature.export" >
+4
+5    <uses-sdk android:minSdkVersion="29" />
+6
+7    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+7-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:5:5-77
+7-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:5:22-74
+8
+9    <application>
+9-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:7:5-12:19
+10        <service
+10-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:8:9-11:56
+11            android:name="com.jofin.multivideo.feature.export.ExportForegroundService"
+11-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:9:13-52
+12            android:exported="false"
+12-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:10:13-37
+13            android:foregroundServiceType="dataSync" />
+13-->/Users/jofin/multilayout-video/feature-export/src/main/AndroidManifest.xml:11:13-53
+14    </application>
+15
+16</manifest>
