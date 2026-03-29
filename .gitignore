@@ -1,0 +1,34 @@
+# Android/Gradle build output
+build/
+*/build/
+.gradle/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+local.properties
+
+# Kotlin / Java
+.kotlin/
+out/
+
+# APK / AAB artifacts
+*.apk
+*.ap_
+*.aab
+
+# Native build output
+.cxx/
+externalNativeBuild/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Keystores and local signing files
+*.jks
+*.keystore
+keystore.properties
