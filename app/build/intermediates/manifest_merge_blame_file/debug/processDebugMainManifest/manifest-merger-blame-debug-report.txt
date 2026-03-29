@@ -9,156 +9,159 @@
 9        android:targetSdkVersion="35" />
 10
 11    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-11-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-77
-11-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:22-74
-12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/5a738aa64eeef2cd3058e28582c6f29a/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:22:5-79
-12-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/5a738aa64eeef2cd3058e28582c6f29a/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:22:22-76
-13    <uses-permission android:name="android.permission.WAKE_LOCK" />
-13-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/5a738aa64eeef2cd3058e28582c6f29a/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:23:5-68
-13-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/5a738aa64eeef2cd3058e28582c6f29a/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:23:22-65
-14
-15    <permission
-15-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
-16        android:name="com.jofin.multivideo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-16-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
-17        android:protectionLevel="signature" />
-17-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
-18
-19    <uses-permission android:name="com.jofin.multivideo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-19-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
-19-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
-20
-21    <application
-21-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:4:5-20:19
-22        android:name="com.jofin.multivideo.MultiVideoApplication"
-22-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:5:9-46
-23        android:allowBackup="true"
-23-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:6:9-35
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/09b38e1bee4dee43f90e7790f81557ba/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
-25        android:debuggable="true"
-26        android:extractNativeLibs="false"
-27        android:label="@string/app_name"
-27-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:7:9-41
-28        android:supportsRtl="true"
-28-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:8:9-35
-29        android:theme="@style/Theme.MultiVideo" >
-29-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:9:9-48
-30        <activity
-30-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:10:9-18:20
-31            android:name="com.jofin.multivideo.MainActivity"
-31-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:11:13-41
-32            android:exported="true" >
-32-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:12:13-36
-33            <intent-filter>
-33-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:13:13-17:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:14:17-69
-34-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:14:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:16:17-77
-36-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:16:27-74
-37            </intent-filter>
-38        </activity>
-39
-40        <service
-40-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:10:9-13:56
-41            android:name="com.jofin.multivideo.feature.export.ExportForegroundService"
-41-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:11:13-87
-42            android:exported="false"
-42-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:12:13-37
-43            android:foregroundServiceType="dataSync" />
-43-->[:feature-export] /Users/jofin/multilayout-video/feature-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:13:13-53
-44
-45        <activity
-45-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/5a8f21b4f53fa044949e63386d632e2f/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-46            android:name="androidx.compose.ui.tooling.PreviewActivity"
-46-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/5a8f21b4f53fa044949e63386d632e2f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-47            android:exported="true" />
-47-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/5a8f21b4f53fa044949e63386d632e2f/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-48        <activity
-48-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/61105f2df50ad3be0c975f0e69ec5e01/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:23:9-25:39
-49            android:name="androidx.activity.ComponentActivity"
-49-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/61105f2df50ad3be0c975f0e69ec5e01/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:24:13-63
-50            android:exported="true" />
-50-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/61105f2df50ad3be0c975f0e69ec5e01/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:25:13-36
-51
-52        <provider
-52-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
-53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:25:13-67
-54            android:authorities="com.jofin.multivideo.androidx-startup"
-54-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:26:13-68
-55            android:exported="false" >
-55-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:27:13-37
-56            <meta-data
-56-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-57-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
-58                android:value="androidx.startup" />
-58-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/877d16e53156ac70d67da6b99edbe22e/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
-59            <meta-data
-59-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/07cf00735820cd57c5f0c1a01136c4d9/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/07cf00735820cd57c5f0c1a01136c4d9/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/07cf00735820cd57c5f0c1a01136c4d9/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-62            <meta-data
-62-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-63                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-63-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-64                android:value="androidx.startup" />
-64-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-65        </provider>
-66
-67        <service
-67-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/a7bc3a6e2f48111964db0a44f2b5cf6c/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-68            android:name="androidx.room.MultiInstanceInvalidationService"
-68-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/a7bc3a6e2f48111964db0a44f2b5cf6c/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-69            android:directBootAware="true"
-69-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/a7bc3a6e2f48111964db0a44f2b5cf6c/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-70            android:exported="false" />
-70-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/a7bc3a6e2f48111964db0a44f2b5cf6c/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-71
-72        <receiver
-72-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-73            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-73-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-74            android:directBootAware="false"
-74-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-75            android:enabled="true"
-75-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-76            android:exported="true"
-76-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-77            android:permission="android.permission.DUMP" >
-77-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-78            <intent-filter>
-78-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-79                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-80            </intent-filter>
-81            <intent-filter>
-81-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-82                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-83            </intent-filter>
-84            <intent-filter>
-84-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-85                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-86            </intent-filter>
-87            <intent-filter>
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-88                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/b5155576e823050bbe36e13530c9ea54/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-89            </intent-filter>
-90        </receiver>
-91    </application>
-92
-93</manifest>
+11-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:27:5-77
+11-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:27:22-74
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+12-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:28:5-87
+12-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:28:22-84
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/2c6ed28e899b2233eb00e0d2f97bbefe/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:22:5-79
+13-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/2c6ed28e899b2233eb00e0d2f97bbefe/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:22:22-76
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/2c6ed28e899b2233eb00e0d2f97bbefe/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:23:5-68
+14-->[androidx.media3:media3-exoplayer:1.9.2] /Users/jofin/.gradle/caches/transforms-4/2c6ed28e899b2233eb00e0d2f97bbefe/transformed/media3-exoplayer-1.9.2/AndroidManifest.xml:23:22-65
+15
+16    <permission
+16-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+17        android:name="com.jofin.multivideo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.jofin.multivideo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:4:5-25:19
+23        android:name="com.jofin.multivideo.MultiVideoApplication"
+23-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:5:9-46
+24        android:allowBackup="true"
+24-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:6:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.13.1] /Users/jofin/.gradle/caches/transforms-4/fb78d23f34236160edeb701e5a567252/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:label="@string/app_name"
+28-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:7:9-41
+29        android:supportsRtl="true"
+29-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:8:9-35
+30        android:theme="@style/Theme.MultiVideo" >
+30-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:9:9-48
+31        <activity
+31-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:10:9-18:20
+32            android:name="com.jofin.multivideo.MainActivity"
+32-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:11:13-41
+33            android:exported="true" >
+33-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:12:13-36
+34            <intent-filter>
+34-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:13:13-17:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:14:17-69
+35-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:14:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:16:17-77
+37-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:16:27-74
+38            </intent-filter>
+39        </activity>
+40
+41        <service
+41-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:20:9-23:56
+42            android:name="com.jofin.multivideo.feature.export.ExportForegroundService"
+42-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:21:13-87
+43            android:exported="false"
+43-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:22:13-37
+44            android:foregroundServiceType="dataSync" />
+44-->/Users/jofin/multilayout-video/app/src/main/AndroidManifest.xml:23:13-53
+45
+46        <activity
+46-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/0a0084ed30ab62d9a4f0ebeeb631d0ba/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+47            android:name="androidx.compose.ui.tooling.PreviewActivity"
+47-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/0a0084ed30ab62d9a4f0ebeeb631d0ba/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+48            android:exported="true" />
+48-->[androidx.compose.ui:ui-tooling-android:1.7.4] /Users/jofin/.gradle/caches/transforms-4/0a0084ed30ab62d9a4f0ebeeb631d0ba/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+49        <activity
+49-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/d1e65c9b2642bd273a7c151a98f52dc9/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:23:9-25:39
+50            android:name="androidx.activity.ComponentActivity"
+50-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/d1e65c9b2642bd273a7c151a98f52dc9/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:24:13-63
+51            android:exported="true" />
+51-->[androidx.compose.ui:ui-test-manifest:1.7.4] /Users/jofin/.gradle/caches/transforms-4/d1e65c9b2642bd273a7c151a98f52dc9/transformed/ui-test-manifest-1.7.4/AndroidManifest.xml:25:13-36
+52
+53        <provider
+53-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
+54            android:name="androidx.startup.InitializationProvider"
+54-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:25:13-67
+55            android:authorities="com.jofin.multivideo.androidx-startup"
+55-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:26:13-68
+56            android:exported="false" >
+56-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:27:13-37
+57            <meta-data
+57-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+58-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+59                android:value="androidx.startup" />
+59-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/jofin/.gradle/caches/transforms-4/34a6b0a3c9eb93dcab709d42bf0cce47/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+60            <meta-data
+60-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/afd205ba3f3f2359c506a017e511cf60/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+61-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/afd205ba3f3f2359c506a017e511cf60/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+62                android:value="androidx.startup" />
+62-->[androidx.emoji2:emoji2:1.3.0] /Users/jofin/.gradle/caches/transforms-4/afd205ba3f3f2359c506a017e511cf60/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+64-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+65                android:value="androidx.startup" />
+65-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+66        </provider>
+67
+68        <service
+68-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/4ae9b2a6ab93ec016266071dfa0fecac/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+69            android:name="androidx.room.MultiInstanceInvalidationService"
+69-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/4ae9b2a6ab93ec016266071dfa0fecac/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+70            android:directBootAware="true"
+70-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/4ae9b2a6ab93ec016266071dfa0fecac/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+71            android:exported="false" />
+71-->[androidx.room:room-runtime:2.6.1] /Users/jofin/.gradle/caches/transforms-4/4ae9b2a6ab93ec016266071dfa0fecac/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+72
+73        <receiver
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+74            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+75            android:directBootAware="false"
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+76            android:enabled="true"
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+77            android:exported="true"
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+78            android:permission="android.permission.DUMP" >
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+79            <intent-filter>
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+80                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+81            </intent-filter>
+82            <intent-filter>
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+83                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+84            </intent-filter>
+85            <intent-filter>
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+86                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+87            </intent-filter>
+88            <intent-filter>
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+89                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/jofin/.gradle/caches/transforms-4/217ccc8a8cedbaa6d9c26ccc6229fd65/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+90            </intent-filter>
+91        </receiver>
+92    </application>
+93
+94</manifest>

@@ -11,6 +11,7 @@ import com.jofin.multivideo.domain.model.ClipTrack
 import com.jofin.multivideo.domain.model.LayoutType
 import com.jofin.multivideo.domain.model.PreviewState
 import com.jofin.multivideo.domain.model.Project
+import com.jofin.multivideo.domain.model.TrimSegment
 import com.jofin.multivideo.domain.repository.ProjectRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -105,6 +106,86 @@ class EditorViewModel @Inject constructor(
 
     fun toggleMute(clipId: String) = updateClip(clipId) {
         copy(muted = !muted)
+    }
+
+    fun unmuteClip(clipId: String) = updateClip(clipId) {
+        copy(muted = false)
+    }
+
+    fun muteClip(clipId: String) = updateClip(clipId) {
+        copy(muted = true)
+    }
+
+    // ── Multi-cut segment operations ──
+
+    fun cutAtPlayhead(clipId: String) {
+        val project = uiState.value.project ?: return
+        val clip = project.clips.firstOrNull { it.id == clipId } ?: return
+        val playheadMs = previewStateFlow.value.currentPositionMs
+        val relativeMs = playheadMs - clip.startOffsetMs
+        if (relativeMs <= 0) return
+
+        // Find which segment the playhead falls in
+        val segments = clip.effectiveSegments()
+        var accumulated = 0L
+        for (seg in segments) {
+            if (relativeMs < accumulated + seg.durationMs) {
+                val cutPointMs = seg.startMs + (relativeMs - accumulated)
+                val newSegments = TimelineMath.cutSegmentAt(segments, seg.id, cutPointMs, clipId)
+                updateClip(clipId) { copy(segments = newSegments) }
+                return
+            }
+            accumulated += seg.durationMs
+        }
+    }
+
+    fun selectSegment(clipId: String, segmentId: String) = updateClip(clipId) {
+        copy(segments = effectiveSegments().map { it.copy(selected = it.id == segmentId) })
+    }
+
+    fun deselectAllSegments(clipId: String) = updateClip(clipId) {
+        copy(segments = segments.map { it.copy(selected = false) })
+    }
+
+    fun deleteSelectedSegment(clipId: String) = updateClip(clipId) {
+        val selected = segments.firstOrNull { it.selected } ?: return@updateClip this
+        val newSegments = TimelineMath.deleteSegment(segments, selected.id)
+        if (newSegments.size == segments.size) return@updateClip this
+        copy(segments = newSegments)
+    }
+
+    fun mergeWithNext(clipId: String, segmentId: String) = updateClip(clipId) {
+        val idx = segments.indexOfFirst { it.id == segmentId }
+        if (idx < 0 || idx >= segments.size - 1) return@updateClip this
+        val newSegments = TimelineMath.mergeSegments(segments, segmentId, segments[idx + 1].id, clipId)
+        copy(segments = newSegments)
+    }
+
+    fun updateAudioFadeIn(clipId: String, fadeInMs: Long) = updateClip(clipId) {
+        copy(audioFadeInMs = fadeInMs.coerceAtLeast(0L))
+    }
+
+    fun updateAudioFadeOut(clipId: String, fadeOutMs: Long) = updateClip(clipId) {
+        copy(audioFadeOutMs = fadeOutMs.coerceAtLeast(0L))
+    }
+
+    fun removeClip(clipId: String) {
+        val project = uiState.value.project ?: return
+        val updatedClips = project.clips
+            .filter { it.id != clipId }
+            .mapIndexed { index, clip -> clip.copy(slotIndex = index, zIndex = index) }
+        if (updatedClips.isEmpty()) return
+        val newSelected = if (previewStateFlow.value.selectedClipId == clipId) {
+            updatedClips.firstOrNull()?.id
+        } else {
+            previewStateFlow.value.selectedClipId
+        }
+        previewStateFlow.value = previewStateFlow.value.copy(selectedClipId = newSelected)
+        saveProject(project.copy(
+            updatedAt = System.currentTimeMillis(),
+            clips = updatedClips,
+            selectedAudioClipId = if (project.selectedAudioClipId == clipId) updatedClips.firstOrNull()?.id else project.selectedAudioClipId,
+        ))
     }
 
     override fun onCleared() {

@@ -4,7 +4,7 @@
             "outputFile": "com.jofin.multivideo.app-mergeDebugResources-68:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/jofin/.gradle/caches/transforms-4/5231265c5514e66ec31a971be99444cf/transformed/appcompat-1.7.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/Users/jofin/.gradle/caches/transforms-4/f7a83c9f4abfeefa5aaf0354c642c347/transformed/appcompat-1.7.0/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

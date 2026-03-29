@@ -9,6 +9,9 @@ import com.jofin.multivideo.domain.model.ExportState
 import com.jofin.multivideo.domain.model.ExportStatus
 import com.jofin.multivideo.domain.model.Project
 import com.jofin.multivideo.domain.model.ProjectSummary
+import com.jofin.multivideo.domain.model.TrimSegment
+import org.json.JSONArray
+import org.json.JSONObject
 
 internal fun Project.toEntity(): ProjectEntity = ProjectEntity(
     id = id,
@@ -46,6 +49,9 @@ internal fun ClipTrack.toEntity(projectId: String): ClipTrackEntity = ClipTrackE
     zIndex = zIndex,
     mimeType = mimeType,
     hasAudio = hasAudio,
+    segmentsJson = segmentsToJson(segments),
+    audioFadeInMs = audioFadeInMs,
+    audioFadeOutMs = audioFadeOutMs,
 )
 
 internal fun ProjectEntity.toSummary(clipCount: Int): ProjectSummary = ProjectSummary(
@@ -94,7 +100,37 @@ internal fun ClipTrackEntity.toDomain(): ClipTrack = ClipTrack(
     zIndex = zIndex,
     mimeType = mimeType,
     hasAudio = hasAudio,
+    segments = segmentsFromJson(segmentsJson),
+    audioFadeInMs = audioFadeInMs,
+    audioFadeOutMs = audioFadeOutMs,
 )
+
+private fun segmentsToJson(segments: List<TrimSegment>): String {
+    val arr = JSONArray()
+    segments.forEach { seg ->
+        arr.put(JSONObject().apply {
+            put("id", seg.id)
+            put("startMs", seg.startMs)
+            put("endMs", seg.endMs)
+            put("selected", seg.selected)
+        })
+    }
+    return arr.toString()
+}
+
+private fun segmentsFromJson(json: String): List<TrimSegment> {
+    if (json.isBlank() || json == "[]") return emptyList()
+    val arr = JSONArray(json)
+    return (0 until arr.length()).map { i ->
+        val obj = arr.getJSONObject(i)
+        TrimSegment(
+            id = obj.getString("id"),
+            startMs = obj.getLong("startMs"),
+            endMs = obj.getLong("endMs"),
+            selected = obj.optBoolean("selected", false),
+        )
+    }
+}
 
 internal fun ExportStatus.toEntity(): ExportStatusEntity = ExportStatusEntity(
     projectId = projectId,

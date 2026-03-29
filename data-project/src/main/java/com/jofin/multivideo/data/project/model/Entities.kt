@@ -56,6 +56,9 @@ data class ClipTrackEntity(
     val zIndex: Int,
     val mimeType: String,
     val hasAudio: Boolean,
+    val segmentsJson: String = "[]",
+    val audioFadeInMs: Long = 0L,
+    val audioFadeOutMs: Long = 0L,
 )
 
 @Entity(tableName = "export_status")

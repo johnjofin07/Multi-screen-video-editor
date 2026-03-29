@@ -11,7 +11,6 @@ import com.jofin.multivideo.feature.export.ExportCompleteRoute
 import com.jofin.multivideo.feature.export.ExportProgressRoute
 import com.jofin.multivideo.feature.export.ExportSheetRoute
 import com.jofin.multivideo.feature.picker.HomeRoute
-import com.jofin.multivideo.feature.picker.PickerRoute
 
 @Composable
 fun MultiVideoApp() {
@@ -19,18 +18,8 @@ fun MultiVideoApp() {
     NavHost(navController = navController, startDestination = Routes.Home) {
         composable(Routes.Home) {
             HomeRoute(
-                onNewProject = { navController.navigate(Routes.Picker) },
+                onNewProject = { projectId -> navController.navigate(Routes.editor(projectId)) },
                 onOpenProject = { projectId -> navController.navigate(Routes.editor(projectId)) },
-            )
-        }
-        composable(Routes.Picker) {
-            PickerRoute(
-                onBack = { navController.popBackStack() },
-                onProjectCreated = { projectId ->
-                    navController.navigate(Routes.editor(projectId)) {
-                        popUpTo(Routes.Home)
-                    }
-                },
             )
         }
         composable(
@@ -66,14 +55,20 @@ fun MultiVideoApp() {
             route = Routes.ExportComplete,
             arguments = listOf(navArgument("projectId") { type = NavType.StringType }),
         ) {
-            ExportCompleteRoute(onDone = { navController.popBackStack(Routes.Home, false) })
+            ExportCompleteRoute(
+                onDone = { navController.popBackStack(Routes.Home, false) },
+                onNewProject = {
+                    navController.popBackStack(Routes.Home, false)
+                },
+                onShare = { /* TODO: launch share intent */ },
+                onOpenApp = { navController.popBackStack(Routes.Home, false) },
+            )
         }
     }
 }
 
 private object Routes {
     const val Home = "home"
-    const val Picker = "picker"
     const val Editor = "editor/{projectId}"
     const val ExportSheet = "export-sheet/{projectId}"
     const val ExportProgress = "export-progress/{projectId}"

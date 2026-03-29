@@ -17,6 +17,14 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name="com.jofin.multivideo.feature.export.ExportForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
     </application>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
 </manifest>

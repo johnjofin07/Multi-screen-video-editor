@@ -3,6 +3,7 @@ package com.jofin.multivideo.data.project
 import android.content.Context
 import androidx.room.Room
 import com.jofin.multivideo.data.project.db.ProjectDao
+import com.jofin.multivideo.data.project.db.MIGRATION_1_2
 import com.jofin.multivideo.data.project.db.ProjectDatabase
 import com.jofin.multivideo.domain.repository.ProjectRepository
 import dagger.Binds
@@ -27,7 +28,9 @@ object ProjectDataModule {
     @Provides
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): ProjectDatabase =
-        Room.databaseBuilder(context, ProjectDatabase::class.java, "multivideo.db").build()
+        Room.databaseBuilder(context, ProjectDatabase::class.java, "multivideo.db")
+            .addMigrations(MIGRATION_1_2)
+            .build()
 
     @Provides
     fun provideProjectDao(database: ProjectDatabase): ProjectDao = database.projectDao()
